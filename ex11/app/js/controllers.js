@@ -8,19 +8,9 @@ angular.module('ex11.controllers',[])
                     var query = '';
                     if ($scope.query) {
                         query = $scope.query;
-                    } 
+                    }
 
-                    var promise = trials.get(query);
+                    $scope.trialData = trials.get(query);
 
-                    promise.then(function(data) {
-                        $log.warn('after get(): ', data);
-
-                        $scope.trials     = data.trials;
-                        $scope.totalCount = data.totalCount;
-                    }, function(reason) {
-                        $log.warn('after get() failure: ', reason);
-                        $scope.trials     = [];
-                        $scope.totalCount = 0;
-                    });
                 });
             }]);
