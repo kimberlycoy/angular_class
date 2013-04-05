@@ -1,0 +1,26 @@
+<!doctype html>
+<html ng-app>
+  <head>
+  <title>Example 5</title>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap.min.css" 
+          rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body ng-controller="TrialsCtrl">
+    <div class="container">
+      <h1>Trial Information</h1>
+
+      <p>There are {{ trials.length }} trials.</p>
+
+      <p>Filter string: <input type="text" ng-model="query"/></p>
+      
+      <ul>
+        <li ng-repeat="trial in trials | filter: query">
+          <b>{{ trial.id }}</b> - {{ trial.title }}
+        </li>
+      </ul>
+
+    </div>
+  </body>
+</html>

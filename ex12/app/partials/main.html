@@ -1,0 +1,19 @@
+<my-header content="Testing 1, 2, 3"></my-header>
+<div my-attr="hello, world!" emphasis="strong"></div>
+<div class="my-class"></div>
+
+
+<h1>Trial Information</h1>
+
+<p>There are {{ totalCount }} trials.</p>
+
+<p>Search string: <input type="text" ng-model="query"/></p>
+
+<trial-table></trial-table>
+
+<ul>
+	<li ng-repeat="trial in trials">
+		<b>{{ trial.id }}</b> - {{ trial.brief_title }}
+	</li>
+</ul>
+

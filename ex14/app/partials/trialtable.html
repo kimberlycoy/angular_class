@@ -1,0 +1,15 @@
+<div>
+	<h3>Trials in a Table</h3>
+	<table class="table table-striped">
+
+	  <tr><th>&nbsp;</th><th>ID</th><th>Title</th></tr>
+
+	  <tr ng-repeat="trial in trials">
+	  	<td>{{ $index }} <span ng-show="$first">FIRST</span></td>
+	  	<td>{{ trial.id | trimid }}</td>
+	  	<td>{{ trial.brief_title | substring:40 }}</td>
+	  </tr>
+
+	</table>
+	<hr/>
+</div>
